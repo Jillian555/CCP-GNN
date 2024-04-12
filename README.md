@@ -24,12 +24,15 @@ matlibplot
 # Reproduce
 For HIV-dataset:
 
-`python main_ogbg.py --config configs/ogbg-molhiv-ccp-sr1-128-2-32-gin.json`
+```Shell
+python main_ogbg.py --config configs/ogbg-molhiv-ccp-sr1-128-2-32-gin.json
+```
 
 For PCBA-dataset:
 
-`python main_ogbg.py --config configs/ogbg-molpcba-ccp-sr1-128-64-32-gin.json`
-
+```Shell
+python main_ogbg.py --config configs/ogbg-molpcba-ccp-sr1-128-64-32-gin.json
+```
 
 # Citation
 
