@@ -129,7 +129,6 @@ def main():
     parser.add_argument('--save_model', action='store_true')
     parser.add_argument('--pretrain', action='store_true')
     parser.add_argument('--seed', type=int)
-    parser.add_argument('--choice', type=int, default=0)
     parser.add_argument('--model_path', type=str)
     parser.add_argument('--weight_decay', type=float)
     parser.add_argument('--lr', type=float)
