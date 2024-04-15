@@ -236,7 +236,6 @@ class _global_attention_sop(nn.Module):
             self.degree_embedding = torch.nn.Embedding(512,1,padding_idx=0)
         if self.degree_2 is True:
             self.degree_linear = torch.nn.Linear(1,1)
-        self.choice=args.choice
     def reset_parameters(self):
         self.attention.reset_parameters()
         if self.degree_1:
@@ -282,13 +281,12 @@ class _global_attention_sop(nn.Module):
             output = Sqrtm.apply(output, self.num_iter)
         if self.is_triu:
             output = Triuvec.apply(output).squeeze()
-            if self.choice==1:
-                output = torch.nn.functional.layer_norm(output, normalized_shape=[output.shape[1]])
-            elif self.choice==2:
-                processed_z = torch.sign(output) * torch.sqrt(torch.abs(output)+1e-5)
-                output = processed_z / (torch.norm(processed_z, p=2, dim=1, keepdim=True)+1e-5)
-            else:
-                pass
+            #layer norm
+            #output = torch.nn.functional.layer_norm(output, normalized_shape=[output.shape[1]])
+            #sqrt
+            #processed_z = torch.sign(output) * torch.sqrt(torch.abs(output)+1e-5)
+            #output = processed_z / (torch.norm(processed_z, p=2, dim=1, keepdim=True)+1e-5)
+            
         output = output.view(batch_size, -1)
         return output
 
