@@ -38,7 +38,7 @@ python main_ogbg.py --config configs/ogbg-molpcba-ccp-sr1-128-64-32-gin.json
 
 ```BibTeX
 @article{ccpgnn,
-  author       = {XXX},
+  author       = {Pengfei Zhu, Jialu Li, Zhe Dong, Qinghua Hu, Xiao Wang, and Qilong Wang},
   title        = {CCP-GNN: Competitive Covariance Pooling for Improving Graph Neural Networks},
   journal      = {{IEEE} Trans. Neural Networks Learn. Syst.},
   volume       = {1},
