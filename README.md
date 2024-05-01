@@ -43,7 +43,7 @@ python main_ogbg.py --config configs/ogbg-molpcba-ccp-sr1-128-64-32-gin.json
   journal      = {{IEEE} Trans. Neural Networks Learn. Syst.},
   volume       = {1},
   number       = {1},
-  pages        = {1--10},
+  pages        = {1--12},
   year         = {2024},
 }
 ```
